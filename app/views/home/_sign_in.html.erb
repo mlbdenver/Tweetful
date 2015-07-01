@@ -1,0 +1,19 @@
+<%= form_for :user, :url => user_session_path,
+                    :builder => InlineErrorsBuilder,
+                    :method => :POST,
+                    :role => :form do |f| %>
+  <div>
+    <%= content_tag :div do %>
+      <%= f.text_field :email, :placeholder => "Username or email" %>
+      <%= f.errors_for :email %>
+    <% end %>
+
+    <%= content_tag :div do %>
+      <%= f.password_field :password, :placeholder => "Password" %>
+      <%= f.errors_for :password %>
+      <%= f.submit "Sign in" %>
+    <% end %>
+    <label><%= f.check_box :remember_me %> Remember me</label> -
+    <%= link_to "Forgot password?", new_user_password_path %>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+<%= render :partial => 'shared/left_nav' %>
+<h4>Who to follow</h4>
+<p>Tweetful accounts in alpabetical order.</p>
+<hr />
+<ol>
+  <% @users.each do |user| %>
+    <li>
+      <%= content_tag :strong, user.name %>
+      <%= content_tag :span, "@"+user.username %>
+      <%= follow_link(user) %>
+    </li>
+    <li><hr></li>
+  <% end %>
+</ol>

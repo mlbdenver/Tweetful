@@ -1,0 +1,1 @@
+Tweetful::Application.config.secret_key_base = '26939aca8e9ed8cc8a5fe6ba63597b2e7ce40057eac9845fdf33776b65aee7b5cf5f8fb50184ed2848e42de6c3a6d9829b2951ebf10a7b3ef1cb3451259f222b'
